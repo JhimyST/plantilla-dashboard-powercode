@@ -1,0 +1,59 @@
+        <!-- Listas de semestres y cursos -->
+        <div class="row w-100 gap-3 gap-md-0">
+          <!-- Columna de Semestres -->
+          <div class="col-12 col-md-6">
+            <div class="card border-0 shadow">
+              <div class="card-header fw-bold">Semestres</div>
+              <div class="card-body text-primary">
+
+                <ul id="lista-semestres" class="list-group">
+                  <li id="1" type="button" class="list-group-item list-group-item-action">Primer
+                    Semestre</li>
+                  <li id="2" type="button" class="list-group-item list-group-item-action">Segundo Semestre</li>
+                  <li id="3" type="button" class="list-group-item list-group-item-action" aria-current="true">Tercer
+                    Semestre</li>
+                  <li id="4" type="button" class="list-group-item list-group-item-action">Cuarto
+                    Semestre</li>
+                  <li id="5" type="button" class="list-group-item list-group-item-action">Quinto Semestre</li>
+                  <li id="6" type="button" class="list-group-item list-group-item-action">Sexto Semestre</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Columna de Cursos -->
+          <div class="col-12 col-md-6">
+            <div class="card border-0 shadow">
+              <div class="card-header fw-bold">Cursos</div>
+              <div class="card-body text-primary">
+
+                <!-- Button trigger modal Crear Nuevo Curso-->
+                <div class=" mb-3 text-start">
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#modCrearCurso"><i class="bi bi-plus-circle"></i>
+                    Crear nuevo curso
+                  </button>
+                </div>
+
+                <!-- Lista de Cursos -->
+                <ul id="lista-cursos" class="list-group">
+                  <li id="cAlgor"
+                    class="list-group-item list-group-item-action list-group-item-dark d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="curso-name">Algoritmia</div>
+                    <div class="text-end text-light">
+                      <div class="">
+                        <button type="button" class="btn btn-outline-secondary text-light" data-bs-toggle="modal"
+                          data-bs-target="#asignarDocente"><i class="bi bi-person-add fs-5"></i>
+                          Añadir docente
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li id="cEstad" class="list-group-item list-group-item-action list-group-item-dark">Estadística I</li>
+                  <li id="cAnali" class="list-group-item list-group-item-action list-group-item-dark">Análisis
+                    matemático</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>

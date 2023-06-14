@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menú lateral responsive - MagtimusPro</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<!-- Iconos Bootstrap 5 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+	<!-- estilos personalizados -->
+	<link rel="stylesheet" href="css/estilos.css">
+
+	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body" class="h-100">
+
+	<!-- navbar -->
+	<nav id="navbar" class="navbar bg-body-tertiary shadow pe-3">
+
+		<div class="icon__menu">
+			<i class="fas fa-bars" id="btn_open"></i>
+		</div>
+
+		<div class="btn-group">
+			<a type="button" class="text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+				aria-expanded="false">
+				Admin
+				<i class="bi bi-person-fill"></i>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-end">
+				<li><a class="dropdown-item" href="#">Config</a></li>
+				<li><a class="dropdown-item" href="#">Edit</a></li>
+				<li><a class="dropdown-item" href="#">Log out</a></li>
+			</ul>
+		</div>
+
+	</nav><!-- </navbar -->
+
+	<!-- sidebar -->
+	<div class="menu__side bg-primary d-flex flex-column" id="menu_side">
+
+		<div class="name__page border-bottom border-light border-opacity-25">
+			<div class="d-flex align-items-center" style="height: 80px;">
+				<i class="bi bi-code-square"></i>
+				<h4>PowerCode</h4>
+
+			</div>
+		</div>
+
+
+		<!-- Opciones del menu -->
+		<div id="options-menu" class="options__menu d-flex flex-column">
+
+			<ul class="nav d-flex flex-column ">
+
+				<li class="nav-item">
+					<a id="optionInicio" href="#" class="link-option selected">
+						<div class="option">
+							<i class="bi bi-house-door" title="Inicio"></i>
+							<h4>Inicio</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionDashboard" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-speedometer2" title="Dashboard"></i>
+							<h4>Dashboard</h4>
+						</div>
+					</a>
+				</li>
+
+				<!-- submenu1 -->
+				<li class="nav-item">
+					<a id="submenuDashboard" href="#" class="submenu-title">
+						<div class="option row">
+              <div class="col-2">
+                <i class="bi bi-speedometer2" title="Dashboard"></i>
+              </div>
+              <div class="col title" >
+                <h4 class="ms-1 mb-0 w-100">Submenu 1  sasasa</h4>
+              </div>
+							<div class="col-2">
+								<i class="bi bi-chevron-down arrow"></i>
+							</div>
+						</div>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a id="dashOption1" class="link-option submenu-item" href="#">
+								<h5>Action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption2" class="link-option submenu-item" href="#">
+								<h5>Another action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption3" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption4" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+					</ul>
+
+				</li>
+
+				<!-- submenu2 -->
+				<li class="nav-item">
+					<a id="submenuCategory" href="#" class=" submenu-title">
+						<div class="option">
+							<i class="bi bi-tags-fill" title="Category"></i>
+							<h4 class="me-5 mb-0">Category</h4>
+							<div class="w-100 d-flex justify-content-end align-items-center">
+								<i class="bi bi-chevron-down arrow"></i>
+							</div>
+						</div>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a id="catOption1" class="link-option submenu-item" href="#">
+								<h5>Action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption2" class="link-option submenu-item" href="#">
+								<h5>Another action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption3" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption4" class="link-option submenu-item" href="#">
+								<h5>Separated link</h5>
+							</a>
+						</li>
+					</ul>
+
+				</li>
+
+				<!-- Sección Docentes -->
+				<li class="nav-item">
+					<a id="optionGestion" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Gestion Docentes"></i>
+							<h4>Gestion Docentes</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionEvaluacionDoc" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-clipboard2-check" title="Evaluación Docente"></i>
+							<h4>Evaluación Docente</h4>
+						</div>
+					</a>
+				</li>
+				
+				<!-- Seccion Alumnos -->
+				<li class="nav-item">
+					<a id="optionRubricaAlum" href="./pages/rubrica-alumno.html" class="link-option">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Rubrica Alumno"></i>
+							<h4>Rubrica Alumno</h4>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a id="optionEvaluacionAlum" href="./pages/evaluacion-alumno.html" class="link-option">
+						<div class="option">
+							<i class="bi bi-clipboard2-check" title="Evaluación Alumno"></i>
+							<h4>Evaluación Alumno</h4>
+						</div>
+					</a>
+				</li>
+				
+				<!-- Seccion Gestión de Salones -->
+				<li class="nav-item">
+					<a id="optionGestionSalones" href="./pages/gestion-salones.html" class="link-option ">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Gestion Salones"></i>
+							<h4>Gestión de Salones</h4>
+						</div>
+					</a>
+				</li><!-- Fin seccion salones -->
+				
+
+
+
+				<li class="nav-item">
+					<a id="optionCustom" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-person-circle" title="Custom"></i>
+							<h4>Custom</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionNosotros" href="#" class="link-option">
+						<div class="option">
+							<i class="far fa-address-card" title="Nosotros"></i>
+							<h4>Nosotros</h4>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- Help -->
+		<div class="ayuda d-flex mt-auto mb-0 pt-2 border-top border-light border-opacity-25" style="height: 50px;">
+			<div style="height: 50px;">
+
+				<a href="#" class="d-flex align-items-center text-white text-decoration-none">
+					<i class="bi bi-question-circle" title="help"></i>
+					<h4>Help</h4>
+				</a>
+			</div>
+		</div>
+
+	</div><!-- </sidebar -->
+
+	<!-- contenido principal y footer -->
+	<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+
+		<!-- main -->
+		<main>
+
+			<!-- Párrafos -->
+			<div class="container-fluid">
+				<h1>Title Exemple</h1><br>
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam sapiente cumque dicta animi explicabo
+					sequi.
+					Ex amet et, dolor eligendi commodi consectetur quo voluptatibus, cum nemo porro veniam at blanditiis?
+					<a id="uno" href="./pages/evaluacion-alumno.html">ir</a>
+				</p>
+				<br>
+
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident adipisci beatae impedit
+					quia,deleniti
+					quasi sequi iusto exercitationem nihil nulla, laboriosam dolore corrupti fuga officiis? Odit a mollitia
+					id
+					magnam amet delectus quia blanditiis reprehenderit explicabo eveniet! Rem voluptatum explicabo ipsum
+					quae,
+					dolorum, laudantium doloribus a, illum saepe sapiente accusantium dicta reiciendis? Amet iure porro
+					voluptatum error fugit odit voluptas?
+				</p>
+			</div>
+
+
+			<!-- cards -->
+			<div class="container-fluid">
+				<h3>Cards</h3>
+				<div class="row">
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-primary shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-success shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-warning shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-info shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- segunda fila -->
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-danger shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-bg-dark shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card shadow">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-3 mb-3 mb-sm-3">
+						<div class="card text-light shadow" style="background-color: #5c6bc0;">
+							<div class="card-body">
+								<h5 class="card-title">Special title treatment</h5>
+								<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- popovers -->
+			<div class="container-fluid mb-3">
+
+				<h3>Popovers</h3>
+				<button type="button" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="right"
+					data-bs-custom-class="custom-popover" data-bs-title="Custom popover"
+					data-bs-content="This popover is themed via CSS variables.">
+					Popover info
+				</button>
+
+				<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+					data-bs-placement="top" data-bs-content="Top popover">
+					Popover on top
+				</button>
+
+			</div>
+
+			<!-- Modales -->
+			<div class="container-fluid">
+				<h3>Modals</h3>
+
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdicion">
+					Editar
+				</button>
+				<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalEliminar">
+					Info
+				</button>
+
+				<!-- Modal Editar-->
+				<div class="modal fade" id="modalEdicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="mb-3">
+										<label for="recipient-name" class="col-form-label">Name:</label>
+										<input type="text" class="form-control" id="recipient-name" value="modl1">
+									</div>
+									<div class="mb-3">
+										<label for="message-text" class="col-form-label">Mensaje:</label>
+										<textarea class="form-control" id="message-text"></textarea>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Info-->
+				<div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								...
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+		<!-- footer -->
+		<footer class="footer mt-auto p-3 bg-light" style="box-shadow: 0 -.5rem 1rem rgba(0,0,0,.15)">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col text-start">
+						<span class="text-body-secondary">rAssessment © 2023
+					</div>
+					<div class="col text-end">
+						<span class="text-body-secondary">Made with <i class="bi bi-heart-fill"></i> by PowerCode</span>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
+
+	<!-- Bootstrap 5.3 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
+
+	<!-- Habilitar Pop-overs Bootstrap -->
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+	</script>
+
+	<!-- Custom JS -->
+	<script src="./js/script.js"></script>
+
+
+</body>
+
+</html>

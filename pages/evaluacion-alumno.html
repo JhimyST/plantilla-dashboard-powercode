@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menú lateral responsive - MagtimusPro</title>
+
+	<!-- Bootstrap 5.3 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<!-- Iconos Bootstrap 5 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+	<!-- estilos personalizados -->
+	<link rel="stylesheet" href="../css/estilos.css">
+
+	<!-- Iconos Fontawesome -->
+	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+
+	<!-- Datatables -->
+	<link href="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.css" rel="stylesheet"/>
+
+	<!-- Read excel file -->
+	<script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
+
+</head>
+
+<body id="body" class="h-100">
+
+	<!-- navbar -->
+	<nav id="navbar" class="navbar bg-body-tertiary shadow pe-3">
+
+		<div class="icon__menu">
+			<i class="fas fa-bars" id="btn_open"></i>
+		</div>
+
+		<div class="btn-group">
+			<a type="button" class="text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static"
+				aria-expanded="false">
+				Admin
+				<i class="bi bi-person-fill"></i>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-end">
+				<li><a class="dropdown-item" href="#">Config</a></li>
+				<li><a class="dropdown-item" href="#">Edit</a></li>
+				<li><a class="dropdown-item" href="#">Log out</a></li>
+			</ul>
+		</div>
+
+	</nav><!-- </navbar -->
+
+	<!-- sidebar -->
+	<div class="menu__side bg-primary d-flex flex-column" id="menu_side">
+
+		<div class="name__page border-bottom border-light border-opacity-25">
+			<div class="d-flex align-items-center" style="height: 80px;">
+				<i class="bi bi-code-square"></i>
+				<h4>PowerCode</h4>
+
+			</div>
+		</div>
+
+		<!-- Opciones del menu -->
+		<div id="options-menu" class="options__menu d-flex flex-column ">
+			<ul class="nav d-flex flex-column ">
+
+				<li class="nav-item">
+					<a id="optionInicio" href="../index.html" class="link-option">
+						<div class="option">
+							<i class="bi bi-house-door" title="Inicio"></i>
+							<h4>Inicio</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionDashboard" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-speedometer2" title="Dashboard"></i>
+							<h4>Dashboard</h4>
+						</div>
+					</a>
+				</li>
+
+				<!-- submenu1 -->
+				<li class="nav-item">
+					<a id="submenuDashboard" href="#" class="submenu-title">
+						<div class="option">
+							<i class="bi bi-speedometer2" title="Dashboard"></i>
+							<h4 class="me-5 mb-0">Dashboard</h4>
+							<div class="w-100 d-flex justify-content-end align-items-center">
+								<i class="bi bi-chevron-down arrow"></i>
+							</div>
+						</div>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a id="dashOption1" class="link-option submenu-item" href="#">
+								<h5>Action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption2" class="link-option submenu-item" href="#">
+								<h5>Another action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption3" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+						<li>
+							<a id="dashOption4" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+					</ul>
+
+				</li>
+
+				<!-- submenu2 -->
+				<li class="nav-item">
+					<a id="submenuCategory" href="#" class=" submenu-title">
+						<div class="option">
+							<i class="bi bi-tags-fill" title="Category"></i>
+							<h4 class="me-5 mb-0">Category</h4>
+							<div class="w-100 d-flex justify-content-end align-items-center">
+								<i class="bi bi-chevron-down arrow"></i>
+							</div>
+						</div>
+					</a>
+					<ul class="submenu">
+						<li>
+							<a id="catOption1" class="link-option submenu-item" href="#">
+								<h5>Action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption2" class="link-option submenu-item" href="#">
+								<h5>Another action</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption3" class="link-option submenu-item" href="#">
+								<h5>Something else here</h5>
+							</a>
+						</li>
+						<li>
+							<a id="catOption4" class="link-option submenu-item" href="#">
+								<h5>Separated link</h5>
+							</a>
+						</li>
+					</ul>
+
+				</li>
+
+				<!-- Seccion Docente -->
+				<li class="nav-item">
+					<a id="optionGestion" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Gestion Docentes"></i>
+							<h4>Gestion Docentes</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionEvaluacionDoc" href="#" class="link-option">
+						<div class="option">
+							<i class="bi bi-clipboard2-check" title="Evaluación Docente"></i>
+							<h4>Evaluación Docente</h4>
+						</div>
+					</a>
+				</li>
+
+				<!-- Seccion Alumno -->
+				<li class="nav-item">
+					<a id="optionRubricaAlum" href="./rubrica-alumno.html" class="link-option">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Rubrica Alumno"></i>
+							<h4>Rubrica Alumno</h4>
+						</div>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a id="optionEvaluacionAlum" href="#" class="link-option selected">
+						<div class="option">
+							<i class="bi bi-clipboard2-check" title="Evaluación Alumno"></i>
+							<h4>Evaluación Alumno</h4>
+						</div>
+					</a>
+				</li>
+				
+				<!-- Gestión de Salones -->
+				<li class="nav-item">
+					<a id="optionGestionSalones" href="./gestion-salones.html" class="link-option">
+						<div class="option">
+							<i class="bi bi-layout-text-window-reverse" title="Gestion Salones"></i>
+							<h4>Gestión de Salones</h4>
+						</div>
+					</a>
+				</li>
+
+
+				<li class="nav-item">
+					<a id="optionCustom" href="#">
+						<div class="option">
+							<i class="bi bi-person-circle" title="Custom"></i>
+							<h4>Custom</h4>
+						</div>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a id="optionNosotros" href="#">
+						<div class="option">
+							<i class="far fa-address-card" title="Nosotros"></i>
+							<h4>Nosotros</h4>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- Help -->
+		<div class="ayuda d-flex mt-auto mb-0 pt-2 border-top border-light border-opacity-25" style="height: 50px;">
+			<div style="height: 50px;">
+
+				<a href="#" class="d-flex align-items-center text-white text-decoration-none">
+					<i class="bi bi-question-circle" title="help"></i>
+					<h4>Help</h4>
+				</a>
+			</div>
+		</div>
+
+	</div><!-- </sidebar -->
+
+	<!-- contenido principal y footer -->
+	<div class="cover-container d-flex w-100 h-100 mx-auto flex-column" style="background:#f1f2f7;">
+
+		<!-- main -->
+		<main style="background-color: #f1f2f7;">
+
+			<!-- Párrafos -->
+			<div class="container-fluid">
+
+				<div class="card border-0 shadow">
+					<div class="card-header fw-bold ">
+						Datos del Alumno
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col col-12 col-sm-6 pb-3">
+								<div class="perfil-container d-flex justify-content-center justify-content-sm-start">
+									<img src="../img/user1-128x128.jpg" alt="" class="rounded-circle">
+								</div>
+							</div>
+
+							<div class="col col-12 col-sm-6 text-center text-sm-end">
+								<p class="card-text">COD. RÚBRICA - V</p>
+								<p class="card-text">UNIVERSIDAD</p>
+								<p class="card-text">Semestre Seccion 2022-1</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+
+						</div>
+						<hr>
+						<div class="card-text text-sm-center">
+							<p class="fw-bolder">Criterios de Evaluación</p>
+						</div>
+
+						<form action="#" method="POST">
+							<div class="form-group">
+								<div class="mb-3 text-start">
+									<label for="inputExcel" class="form-label">Importar archivo excel</label>
+									<input class="form-control mb-3" type="file" id="inputExcel">
+									<!-- <a id="confirmImport" type="button" href="#" class="btn btn-primary">Importar</a> -->
+									<button id="confirmImport" type="button" class="btn btn-primary">Añadir a Tabla</button>
+								</div>
+							</div>
+							<div class="form-group">
+								
+								<!-- table - Datatable -->
+								<table id="table-criterios-evaluacion" class="table table-striped table-bordered align-middle mt-2" style="width:100%">
+									<thead class="table-dark text-center">
+										<tr>
+											<th class="text-center">Criterios</th>
+											<th class="text-center">Escala de Valoración</th>
+										</tr>
+									</thead>
+
+									<tbody>
+
+										
+									</tbody>
+								</table>
+							</div>
+
+							<div class="form-actions form-group">
+								<button id="submitCalificacion" type="submit" class="btn btn-primary ">Guardar</button>
+								<button type="reset" class="btn btn-danger ">
+									Cancelar
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="card-footer text-body-secondary">
+						2 days ago
+					</div>
+				</div>
+
+			</div>
+
+
+		</main>
+
+		<!-- footer -->
+		<footer class="footer mt-auto p-3 bg-light" style="box-shadow: 0 -.5rem 1rem rgba(0,0,0,.15)">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col text-start">
+						<span class="text-body-secondary">rAssessment © 2023
+					</div>
+					<div class="col text-end">
+						<span class="text-body-secondary">Made with <i class="bi bi-heart-fill"></i> by PowerCode</span>
+					</div>
+
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
+
+	<!-- Bootstrap 5.3 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+		crossorigin="anonymous"></script>
+
+	<!-- Habilitar Pop-overs Bootstrap -->
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+	</script>
+
+	<!-- Habilitar input file -->
+	<script src="../js/bs-custom-file-input.min.js"></script>
+
+
+	<!-- Datatables -->
+	<script src="https://cdn.datatables.net/v/bs5/dt-1.13.4/datatables.min.js"></script>
+
+	<!-- Inicialización de Datatables -->
+	<script src="../js/datatables/datatables-evaluacion-alumn-init.js"></script>
+
+	<!-- Custom JS -->
+	<script src="../js/script.js"></script>
+
+
+</body>
+
+</html>

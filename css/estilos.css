@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  --card-light: #fff;
+  --option-no-selected: #ffffffb2;
+  --bs-success: #28a745;
+}
+
+body {
+  margin-left: 90px;
+  /* margin-top: 90px; */
+  transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+main {
+  padding: 20px;
+  margin-top: 80px;
+}
+
+
+.icon__menu {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(10px);
+}
+
+.icon__menu i {
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.menu__side {
+  width: 90px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 18px;
+  z-index: 300;
+  overflow: hidden;
+  overflow-y: scroll;
+  transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para chrome, safari y opera*/
+.menu__side::-webkit-scrollbar {
+  display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu__side {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.name__page {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  height: 80px;
+}
+
+.name__page i {
+  width: 20px;
+  margin-right: 20px;
+}
+
+.options__menu {
+  padding: 20px 30px;
+  top: 80px;
+  box-sizing: border-box;
+}
+
+.options__menu a {
+  color: var(--option-no-selected);
+  cursor: default;
+  display: block;
+  position: relative;
+  transition: color 300ms;
+  text-decoration-line: none;
+  padding: 0 ;
+  border-radius: 10px;
+}
+
+.options__menu a:hover {
+  color: white;
+}
+
+.options__menu .option {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.options__menu .option i {
+  width: 20px;
+  cursor: pointer;
+  margin: 0;
+}
+.options__menu .option i.arrow{
+  
+  transition: all 0.3s ease;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.options__menu .option h4 {
+  margin-bottom: 0;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+a.selected {
+  color: #fff;
+
+}
+
+a.selected h4{
+  font-weight: 600;
+}
+.selected:before {
+  content: "";
+  width: 5px;
+  height: 80%;
+  background: white;
+  position: absolute;
+  top: 10%;
+  left: -30px;
+}
+
+/* ayuda */
+
+.ayuda h4 {
+  font-weight: 300;
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 17px;
+}
+
+.ayuda{
+    margin: 10px 20px;
+    padding: 0 10px;
+}
+
+
+/* personalizando submenu */
+
+
+.options__menu ul.submenu {
+  list-style: none;
+  display: none;
+  padding-left: 40px;
+}
+
+.options__menu ul.submenu .submenu-item{
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+.options__menu ul.submenu .submenu-item h5{
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.options__menu li.showMenu .submenu{
+  display: block;
+}
+.options__menu li.showMenu .submenu-title i.arrow{
+  transform: rotate(-180deg);
+}
+
+.sub-menu .accordion{
+  --bs-accordion-bg:none;
+  --bs-accordion-border-color:none;
+}
+.sub-menu .accordion-body{
+  padding:0
+}
+
+/*Clases para usar en JavaScript*/
+
+.body_move {
+  margin-left: 260px;
+}
+
+.menu__side_move {
+  width: 260px;
+}
+
+@media screen and (max-width: 760px) {
+  .body_move {
+    margin-left: 260px;
+  }
+
+  .menu__side{
+    width: 90px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    color: white;
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  .menu__side_move {
+    width: 260px;
+  }
+
+  .menu__side_hidden{
+    width: 260px;
+    left: -260px;
+  }
+
+  .body_hidden{
+    margin-left: 0px;
+  }
+  
+}
+
+/* Custom Bootstrap's classes */
+#navbar{
+  width: calc(100% - 90px);
+  height: 80px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+.text-success{
+  color: #28a745 !important;
+}
+.text-danger{
+  color: #dc3545!important;
+}
+.text-bg-success{
+  background-color: #28a745 !important;
+}
+.btn-success{
+  --bs-btn-active-bg: #28a745 !important;
+  --bs-btn-bg: #28a745 !important;
+  --bs-btn-border-color:#28a745 !important;
+}
+.btn-danger{
+  --bs-btn-active-bg: #dc3545!important;
+}
+
+
+/* estilos para Datatable */
+.uniqueClassName {
+  text-align: center;
+}
