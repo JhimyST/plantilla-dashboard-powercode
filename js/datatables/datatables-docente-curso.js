@@ -1,11 +1,7 @@
 $(document).ready(function () {
   let table_docente_curso = $("#table-docente-curso");
   let inputExcel = document.getElementById("inputExcel");
-  let listaSemestres = $("#lista-semestres");
-  let btnApplyFilters = $("#apply-filters");
-  let listaCursos = $("#lista-cursos-all .lista-curso-item ul");
-  let areas = $("#formAreaSelect");
-  let docentesOfCourses = $("#collapseDocentes1");
+
 
   //importar excel
   class Excel {
@@ -52,48 +48,6 @@ $(document).ready(function () {
       return this.registro[2];
     }
   }
-
-
-  /* Diseño de semestres -> cursos */
-  console.log(listaCursos);
-  // Manejando el active para cada opcion de la lista de cursos
-  listaCursos.find('li').click(function (e) {
-    e.preventDefault();
-    let idElement = $(this).attr("id");
-
-    listaCursos.find('li').each(function () {
-      if (idElement == $(this).attr("id")) {
-        $(this).addClass("active");
-      } else {
-        $(this).removeClass("active");
-      }
-    });
-  });
-
-  /* Validación de selects */
-  areas.on('change', function () {
-    let varOption = areas.val();
-  });
-
-
-  /* Validación de Existencia de Asignación de docentes */
-
-  listaCursos.find('li').each(function(){
-    let contentCollapseDocentes= $(this).find(".collapse");
-    console.log(contentCollapseDocentes);
-    if (contentCollapseDocentes.children('div').text() != 0) {
-      contentCollapseDocentes.parentsUntil(".list-group").removeClass('bg-danger bg-opacity-75 ');
-      contentCollapseDocentes.parentsUntil(".list-group").addClass('bg-success bg-opacity-75 ');
-    }else{
-      contentCollapseDocentes.parentsUntil(".list-group").removeClass("bg-success bg-opacity-75 ");
-      contentCollapseDocentes.parentsUntil(".list-group").addClass("bg-danger bg-opacity-75");
-    }
-
-  })
-  
-
-
-
 
   /* Importando el archivo excel */
   inputExcel.addEventListener("change", async function (e) {
