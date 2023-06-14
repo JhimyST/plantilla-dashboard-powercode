@@ -4,6 +4,7 @@ $(document).ready(function () {
   let listasCursos = $("#columnCursos .lista-curso-item ul");
   let areas = $("#formAreaSelect");
   let docentesOfCourses = $("#collapseDocentes1");
+  let listaSemestres = $("#lista-semestres");
 
   /* console.log(listasCursos); */
 
@@ -35,22 +36,18 @@ $(document).ready(function () {
 
   /* Validación de Existencia de Asignación de docentes */
 
-  listasCursos.each(function(listaCurso, index) {
+  listasCursos.each(function (index, listaCurso) {
     let cursosConDocentes = 0;
     let cursosSinDocentes = 0;
-    console.log($(index));
+    let containerListaCursos = $(this).find('li div.collapse').parents("div.lista-curso-item");
 
-    $(this).find('li').each(function (curso, index) {
-      console.log($(this));
+    /* Recorre cursos para añadir o quitar el botón de mostrar docentes */
+    $(this).find('li').each(function (index, curso) {
       let contentCollapseDocentes = $(this).find("div.collapse"); // Obtener el div que contiene el contenido del collapse
       let IdCollapseDocentes = contentCollapseDocentes.attr('id'); // Obtener el id del div que contiene el contenido del collapse
-  
-      let containerListaCursos = contentCollapseDocentes.parents("div.lista-curso-item");
-      let listaSemestres = $("#lista-semestres");
-  
+
       if (contentCollapseDocentes.children('div').text() != 0) {
-        console.log('si hay contenido');
-        contentCollapseDocentes.parentsUntil(".list-group").find('.curso-btn-opciones').append(`
+        contentCollapseDocentes.parentsUntil(".list-group").find('.curso-btn-opciones').prepend(`
             <div class="d-flex">
               <button type="button"
                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
@@ -61,25 +58,26 @@ $(document).ready(function () {
               </button>
             </div>`
         );
-        cursosConDocentes++;        
-        /* listaSemestres.find('a.list-group-item').each(function () {
-          
-          if ($(this).attr('href').substring(1) == containerListaCursos.attr('id')) {
-            $(this).append('<i class="bi bi-check2-circle"></i>');
-          }
-        }); */
-  
-  
+        cursosConDocentes++;
+
       } else {
-        console.log('no hay contenido');
         contentCollapseDocentes.parentsUntil(".list-group").find('.curso-btn-opciones div button[data-bs-toggle="collapse"]').remove();
         cursosSinDocentes++;
       }
     })
 
-    console.log("cursos con docentes: "+cursosConDocentes);
-    console.log("cursos sin docentes: "+cursosSinDocentes);
-  });
+    /* Recorre los semestres para añadir o quitar el ícono de check si tiene todos sus cursos con docentes o no*/
+    listaSemestres.find('a.list-group-item').each(function () {
+      if ($(this).attr('href').substring(1) == containerListaCursos.attr('id') ) {
+        if (cursosSinDocentes == 0) {
+          $(this).find("div").append('<i class="bi bi-check2-circle text-success fs-4 fw-bold"></i>');
+        }else{
+          $(this).find("div").append('<i class="bi bi-clock-history text-danger fs-4 fw-bold"></i>');
+        }
+      }
+    });
+
+  });/* Recorre cada ul que guarda los cursos para cada semestre */
 
 
 });
