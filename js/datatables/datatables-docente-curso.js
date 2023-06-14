@@ -82,17 +82,9 @@ $(document).ready(function () {
     let contentCollapseDocentes= $(this).find(".collapse");
     console.log(contentCollapseDocentes);
     if (contentCollapseDocentes.children('div').text() != 0) {
-        
-      console.log(contentCollapseDocentes.children('div').text());
-      
       contentCollapseDocentes.parentsUntil(".list-group").removeClass('bg-danger bg-opacity-75 ');
       contentCollapseDocentes.parentsUntil(".list-group").addClass('bg-success bg-opacity-75 ');
-
-      console.log(contentCollapseDocentes.parentsUntil(".list-group").attr('id'));
-      
     }else{
-      console.log('No hay contenido');
-      
       contentCollapseDocentes.parentsUntil(".list-group").removeClass("bg-success bg-opacity-75 ");
       contentCollapseDocentes.parentsUntil(".list-group").addClass("bg-danger bg-opacity-75");
     }
