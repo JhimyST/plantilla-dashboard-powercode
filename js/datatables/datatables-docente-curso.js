@@ -73,41 +73,33 @@ $(document).ready(function () {
   /* Validación de selects */
   areas.on('change', function () {
     let varOption = areas.val();
-    console.log(varOption);
   });
 
 
   /* Validación de Existencia de Asignación de docentes */
 
-  listaCursos.find("button[data-bs-toggle='collapse']").on('click', function (e) {
-    e.preventDefault();
-    let valorHref =$(this).attr("href");
-    console.log(valorHref);
-    let valorIdCollapse = valorHref.substring(1);
-    console.log(valorIdCollapse);
-    console.log($(this));
+  listaCursos.find('li').each(function(){
+    let contentCollapseDocentes= $(this).find(".collapse");
+    console.log(contentCollapseDocentes);
+    if (contentCollapseDocentes.children('div').text() != 0) {
+        
+      console.log(contentCollapseDocentes.children('div').text());
+      
+      contentCollapseDocentes.parentsUntil(".list-group").removeClass('bg-danger bg-opacity-75 ');
+      contentCollapseDocentes.parentsUntil(".list-group").addClass('bg-success bg-opacity-75 ');
 
-    let idContenidoCollapsed = listaCursos.find(`div[id='${valorIdCollapse}']`);
-
-    console.log(idContenidoCollapsed);
-
-    if (idContenidoCollapsed.children('div').text() != 0 ) {
-      console.log('Si hay contenido');
-      console.log(idContenidoCollapsed.children('div').text());
-      /* idContenidoCollapsed.parentsUntil(".list-group").removeClass("active");
-      idContenidoCollapsed.parentsUntil(".list-group").removeClass('bg-success');
-      idContenidoCollapsed.parentsUntil(".list-group").addClass('bg-danger');
-
-      console.log(idContenidoCollapsed.parentsUntil(".list-group").attr('id')); */
+      console.log(contentCollapseDocentes.parentsUntil(".list-group").attr('id'));
       
     }else{
       console.log('No hay contenido');
-      /* idContenidoCollapsed.parentsUntil(".list-group").removeClass("active");
-      idContenidoCollapsed.parentsUntil(".list-group").removeClass("bg-danger");
-      idContenidoCollapsed.parentsUntil(".list-group").addClass('bg-success'); */
+      
+      contentCollapseDocentes.parentsUntil(".list-group").removeClass("bg-success bg-opacity-75 ");
+      contentCollapseDocentes.parentsUntil(".list-group").addClass("bg-danger bg-opacity-75");
     }
 
-  });
+  })
+  
+
 
 
 
