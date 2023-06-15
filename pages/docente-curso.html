@@ -262,27 +262,31 @@
       <div
         class="container-fluid d-flex align-items-center flex-column justify-content-center my-5 py-4 bg-white rounded">
 
-        <div class="container-fluid mb-5 border-bottom">
-          <h2>Asignación de Docentes</h2>
+        <div class="container-fluid d-flex justify-content-between align-items-center mb-5 border-bottom">
+          <h2 class="fw-bold">Asignación de Docentes</h2>
+          <div class="universidad-name fst-italic fw-semibold">Universidad Nacional del Centro del Perú</div>
         </div>
 
         <!-- Formulario para filtros -->
         <div class="container-fluid w-100">
           <div class="container-fluid shadow-sm rounded border py-3" style="background: #e1eff3;">
-            <form action="">
+            <form id="form-filtros" class="needs-validation" >
               <div class="container-fluid mb-3">
                 <span>Seleccione la información correspondiente para la asignación de docentes</span>
               </div>
               <div class="row w-100 mb-2 mx-auto">
 
                 <div class="col-12 col-sm-6 col-lg-3 ">
-                  <select id="formPeriodoSelect" name="formPeriodoSelect" class="form-select mb-3"
-                    aria-label="Default select example">
-                    <option selected>Periodo Académico</option>
+                  <select id="formPeriodoSelect" name="formPeriodoSelect" class="form-select mb-3" aria-label="Default select example"
+                     required>
+                    <option selected disabled value="">Periodo Académico</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-lg-3 ">
@@ -480,7 +484,6 @@
                         </div>
                       </li>
                     </ul>
-
                   </div>
 
                   <div class="lista-curso-item tab-pane fade" id="list-cursos-2" role="tabpanel"
@@ -668,7 +671,9 @@
                       <input type="text" class="form-control" id="formNombreCurso" name="formNombreCurso"
                         placeholder="Example input placeholder">
                       <label for="formNombreCurso" class="fs-6">Nombre del Curso</label>
+                      
                     </div>
+
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control" id="formCodigoCurso" name="formCodigoCurso"
                         placeholder="Another input placeholder">

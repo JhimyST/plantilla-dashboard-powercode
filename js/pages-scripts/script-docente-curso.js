@@ -6,6 +6,7 @@ $(document).ready(function () {
   let docentesOfCourses = $("#collapseDocentes1");
   let listaSemestres = $("#lista-semestres");
 
+  console.log(listasCursos);
   /* console.log(listasCursos); */
 
   /* Inicializacion de select 2 */
@@ -35,15 +36,13 @@ $(document).ready(function () {
   });
 
   /* Validación de Existencia de Asignación de docentes */
-
   listasCursos.each(function (index, listaCurso) {
     let cursosConDocentes = 0;
     let cursosSinDocentes = 0;
-    let containerListaCursos = $(this).find('li div.collapse').parents("div.lista-curso-item");
-
+    let containerListaCursos = $(listaCurso).find('li div.collapse').parents("div.lista-curso-item");
     /* Recorre cursos para añadir o quitar el botón de mostrar docentes */
     $(this).find('li').each(function (index, curso) {
-      let contentCollapseDocentes = $(this).find("div.collapse"); // Obtener el div que contiene el contenido del collapse
+      let contentCollapseDocentes = $(curso).find("div.collapse"); // Obtener el div que contiene el contenido del collapse
       let IdCollapseDocentes = contentCollapseDocentes.attr('id'); // Obtener el id del div que contiene el contenido del collapse
 
       if (contentCollapseDocentes.children('div').text() != 0) {
