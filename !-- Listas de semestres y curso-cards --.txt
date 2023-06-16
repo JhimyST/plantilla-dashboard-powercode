@@ -57,3 +57,268 @@
             </div>
           </div>
         </div>
+
+
+//competencia-curso        
+
+<div class="row w-100 gap-3 gap-md-0 mt-5">
+
+          <!-- Columna de Competencias -->
+          <div class="col-12 col-md-6">
+            <div class="card border-0 shadow">
+              <div class="card-header fw-bold">Competencias</div>
+              <div class="card-body text-primary">
+                <div class="list-group" id="lista-competencias" role="tablist">
+                  <a class="list-group-item list-group-item-action list-group-item-primary active" id="primer-semestre"
+                    data-bs-toggle="list" href="#list-cursos-1" role="tab" aria-controls="list-cursos-1">
+                    <div class="d-flex justify-content-between">
+                      <span>Primer semestre</span>
+                    </div>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="segundo-semestre"
+                    data-bs-toggle="list" href="#list-cursos-2" role="tab" aria-controls="list-cursos-2">
+                    <div class="d-flex justify-content-between">
+                      Segundo semestre
+                    </div>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="tercer-semestre"
+                    data-bs-toggle="list" href="#list-cursos-3" role="tab" aria-controls="list-cursos-3">
+                    <div class="d-flex justify-content-between">
+                      Tercer semestre
+                    </div>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="cuarto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-4" role="tab" aria-controls="list-cursos-4">
+                    <div class="d-flex justify-content-between">
+                      Cuarto semestre
+                    </div>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="quinto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-5" role="tab" aria-controls="list-cursos-5">
+                    <div class="d-flex justify-content-between">
+                      Quinto semestre
+                    </div>
+                  </a>
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="sexto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-6" role="tab" aria-controls="list-cursos-6">
+                    <div class="d-flex justify-content-between">
+                      Sexto semestre
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna de Cursos -->
+          <div class="col-12 col-md-6">
+            <div class="card border-0 shadow">
+              <div class="card-header fw-bold">Cursos</div>
+              <div class="card-body text-primary">
+
+                <!-- Button trigger modal Crear Nuevo Curso-->
+                <div class=" mb-3 text-start">
+                  <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                    data-bs-target="#modCrearCurso"><i class="bi bi-plus-circle"></i>
+                    Crear nuevo curso
+                  </button>
+                </div>
+
+                <!-- Lista de Cursos -->
+                <div class="tab-content" id="columnCursos">
+
+                  <div class="lista-curso-item tab-pane fade show active" id="list-cursos-1" role="tabpanel"
+                    aria-labelledby="primer-semestre">
+                    <ul class="list-group">
+
+                      <li id="cursoAlgor"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center bg-opacity-75">
+
+                        <div class="row w-100 mx-auto px-0 align-items-center">
+                          <div class="curso-name col-12 col-lg-5 ">
+                            <div class="">Algoritmia</div>
+                          </div>
+                          <div
+                            class="curso-btn-opciones col-12 col-lg-7 d-flex px-0 justify-content-center justify-content-lg-end">
+
+                            <!-- Button trigger modal -->
+                            <div class="d-flex">
+                              <button type="button"
+                                class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                  class="bi bi-person-add fs-5"></i>
+                                Añadir docente
+                              </button>
+                            </div>
+
+                          </div>
+                        </div>
+
+                        <!-- Contenido del collapse -->
+                        <div class="collapse" id="collapseDocentes1">
+                          <div class="card card-body text-dark">
+                            Some placeholder content for the collapse component. This panel is hidden by default but
+                            revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                      </li>
+
+                      <li id="cursoEstad"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center justify-content-between bg-opacity-75">
+                        <div class="row w-100 mx-auto px-0 align-items-center">
+                          <div class="col-12 col-lg-5 ">
+                            <div class="curso-name">Estadística</div>
+                          </div>
+                          <div
+                            class="curso-btn-opciones col-12 col-lg-7 d-flex px-0 justify-content-center justify-content-lg-end">
+
+                            <!-- Button trigger modal -->
+                            <div class="d-flex">
+                              <button type="button"
+                                class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                  class="bi bi-person-add fs-5"></i>
+                                Añadir docente
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Contenido del collapse -->
+                        <div class="collapse" id="collapseDocentes2">
+                          <div class="card card-body text-dark">
+                          </div>
+                        </div>
+                      </li>
+
+                      <li id="cursoAnali"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="curso-name">Análisis Matemático</div>
+                        <div class="text-end text-light">
+                          <!-- Button trigger modal -->
+                          <div class="d-flex">
+                            <button type="button"
+                              class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                              data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                class="bi bi-person-add fs-5"></i>
+                              Añadir docente
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="lista-curso-item tab-pane fade" id="list-cursos-2" role="tabpanel"
+                    aria-labelledby="segundo-semestre">
+                    <ul class="list-group">
+                      <li id="cursoGeo"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center bg-opacity-75">
+
+                        <div class="row w-100 mx-auto px-0 align-items-center">
+                          <div class="col-12 col-lg-5 ">
+                            <div class="curso-name">Geometría</div>
+                          </div>
+                          <div
+                            class="curso-btn-opciones col-12 col-lg-7 d-flex px-0 justify-content-center justify-content-lg-end">
+
+                            <!-- Button trigger modal -->
+                            <div class="d-flex">
+                              <button type="button"
+                                class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                  class="bi bi-person-add fs-5"></i>
+                                Añadir docente
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Contenido del collapse -->
+                        <div class="collapse" id="collapseDocentes3">
+                          <div class="card card-body text-dark">
+                            Some placeholder content for the collapse component. This panel is hidden by default but
+                            revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                      </li>
+
+                      <li id="cursoProg"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="row w-100 mx-auto px-0 align-items-center">
+
+                          <div class="curso-name col-lg-5">Programación</div>
+                          <div
+                            class="curso-btn-opciones col-12 col-lg-7 d-flex px-0 justify-content-center justify-content-lg-end">
+                            <div class="d-flex">
+
+                              <!-- Button trigger modal -->
+                              <button type="button"
+                                class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                  class="bi bi-person-add fs-5"></i>
+                                Añadir docente
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Contenido del collapse -->
+                        <div class="collapse" id="collapseDocentes4">
+                          <div class="card card-body text-dark">
+                            Some placeholder content for the collapse component. This panel is hidden by default but
+                            revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                      </li>
+
+                      <li id="cursoDesarrollo"
+                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="row w-100 mx-auto px-0 align-items-center">
+
+                          <div class="curso-name col-lg-5">Desarrollo Web</div>
+                          <div
+                            class="curso-btn-opciones col-12 col-lg-7 d-flex px-0 justify-content-center justify-content-lg-end">
+                            <div class="d-flex">
+
+                              <!-- Button trigger modal -->
+                              <button type="button"
+                                class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
+                                  class="bi bi-person-add fs-5"></i>
+                                Añadir docente
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Contenido del collapse -->
+                        <div class="collapse" id="collapseDocentes5">
+                          <div class="card card-body text-dark">
+                            Some placeholder content for the collapse component. This panel is hidden by default but
+                            revealed when the user activates the relevant trigger.
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="lista-curso-item tab-pane fade" id="list-cursos-3" role="tabpanel"
+                    aria-labelledby="tercer-semestre">
+                    quimica</div>
+
+                  <div class="lista-curso-item tab-pane fade" id="list-cursos-4" role="tabpanel"
+                    aria-labelledby="cuarto-semestre">alge
+                  </div>
+
+                  <div class="lista-curso-item tab-pane fade" id="list-cursos-5" role="tabpanel"
+                    aria-labelledby="quinto-semestre">
+                    5</div>
+
+                  <div class="lista-curso-item tab-pane fade" id="list-cursos-6" role="tabpanel"
+                    aria-labelledby="sexto-semestre">6
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+</div>
