@@ -48,7 +48,7 @@ $(document).ready(function () {
                 data-bs-toggle="collapse" href="#${IdCollapseDocentes}" role="button" aria-expanded="false"
                 aria-controls="${IdCollapseDocentes}">
                 <i class="bi bi-eye-fill"></i>
-                Ver docentes
+                Matricular estudiantes
               </button>
             </div>`
         );
@@ -60,16 +60,6 @@ $(document).ready(function () {
       }
     })
 
-    /* Recorre los semestres para añadir o quitar el ícono de check si tiene todos sus cursos con docentes o no*/
-    listaSemestres.find('a.list-group-item').each(function () {
-      if ($(this).attr('href').substring(1) == containerListaCursos.attr('id') ) {
-        if (cursosSinDocentes == 0) {
-          $(this).find("div").append('<i class="bi bi-check2-circle text-success fs-4 fw-bold"></i>');
-        }else{
-          $(this).find("div").append('<i class="bi bi-clock-history text-danger fs-4 fw-bold"></i>');
-        }
-      }
-    });
 
   });/* Recorre cada ul que guarda los cursos para cada semestre */
 
