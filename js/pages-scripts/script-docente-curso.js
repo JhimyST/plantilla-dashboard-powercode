@@ -12,7 +12,7 @@ $(document).ready(function () {
   /* Inicializacion de select 2 */
   $('#docente-select').select2({
     placeholder: "Buscar",
-    dropdownParent: '#asignarDocente',
+    dropdownParent: '#modalAsignarDocente',
   });
 
   /* Diseño de semestres -> cursos */

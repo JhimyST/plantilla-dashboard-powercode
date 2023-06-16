@@ -71,7 +71,6 @@
       <div class="d-flex align-items-center" style="height: 80px;">
         <i class="bi bi-code-square"></i>
         <h4>PowerCode</h4>
-
       </div>
     </div>
 
@@ -270,15 +269,15 @@
         <!-- Formulario para filtros -->
         <div class="container-fluid w-100">
           <div class="container-fluid shadow-sm rounded border py-3" style="background: #e1eff3;">
-            <form id="form-filtros" class="needs-validation" >
+            <form id="form-filtros" class="needs-validation">
               <div class="container-fluid mb-3">
                 <span>Seleccione la información correspondiente para la asignación de docentes</span>
               </div>
               <div class="row w-100 mb-2 mx-auto">
 
                 <div class="col-12 col-sm-6 col-lg-3 ">
-                  <select id="formPeriodoSelect" name="formPeriodoSelect" class="form-select mb-3" aria-label="Default select example"
-                     required>
+                  <select id="formPeriodoSelect" name="formPeriodoSelect" class="form-select mb-3"
+                    aria-label="Default select example" required>
                     <option selected disabled value="">Periodo Académico</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -346,38 +345,38 @@
               <div class="card-header fw-bold">Semestres</div>
               <div class="card-body text-primary">
                 <div class="list-group" id="lista-semestres" role="tablist">
-                  <a class="list-group-item list-group-item-action list-group-item-primary active" id="primer-semestre" data-bs-toggle="list"
-                    href="#list-cursos-1" role="tab" aria-controls="list-cursos-1">
+                  <a class="list-group-item list-group-item-action list-group-item-primary active" id="primer-semestre"
+                    data-bs-toggle="list" href="#list-cursos-1" role="tab" aria-controls="list-cursos-1">
                     <div class="d-flex justify-content-between">
                       <span>Primer semestre</span>
                     </div>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-primary" id="segundo-semestre" data-bs-toggle="list"
-                    href="#list-cursos-2" role="tab" aria-controls="list-cursos-2">
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="segundo-semestre"
+                    data-bs-toggle="list" href="#list-cursos-2" role="tab" aria-controls="list-cursos-2">
                     <div class="d-flex justify-content-between">
                       Segundo semestre
                     </div>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-primary" id="tercer-semestre" data-bs-toggle="list"
-                    href="#list-cursos-3" role="tab" aria-controls="list-cursos-3">
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="tercer-semestre"
+                    data-bs-toggle="list" href="#list-cursos-3" role="tab" aria-controls="list-cursos-3">
                     <div class="d-flex justify-content-between">
                       Tercer semestre
                     </div>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-primary" id="cuarto-semestre" data-bs-toggle="list"
-                    href="#list-cursos-4" role="tab" aria-controls="list-cursos-4">
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="cuarto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-4" role="tab" aria-controls="list-cursos-4">
                     <div class="d-flex justify-content-between">
                       Cuarto semestre
                     </div>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-primary" id="quinto-semestre" data-bs-toggle="list"
-                    href="#list-cursos-5" role="tab" aria-controls="list-cursos-5">
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="quinto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-5" role="tab" aria-controls="list-cursos-5">
                     <div class="d-flex justify-content-between">
                       Quinto semestre
                     </div>
                   </a>
-                  <a class="list-group-item list-group-item-action list-group-item-primary" id="sexto-semestre" data-bs-toggle="list"
-                    href="#list-cursos-6" role="tab" aria-controls="list-cursos-6">
+                  <a class="list-group-item list-group-item-action list-group-item-primary" id="sexto-semestre"
+                    data-bs-toggle="list" href="#list-cursos-6" role="tab" aria-controls="list-cursos-6">
                     <div class="d-flex justify-content-between">
                       Sexto semestre
                     </div>
@@ -403,7 +402,7 @@
 
                 <!-- Lista de Cursos -->
                 <div class="tab-content" id="columnCursos">
-
+                  
                   <div class="lista-curso-item tab-pane fade show active" id="list-cursos-1" role="tabpanel"
                     aria-labelledby="primer-semestre">
                     <ul class="list-group">
@@ -672,7 +671,7 @@
                       <input type="text" class="form-control" id="formNombreCurso" name="formNombreCurso"
                         placeholder="Example input placeholder">
                       <label for="formNombreCurso" class="fs-6">Nombre del Curso</label>
-                      
+
                     </div>
 
                     <div class="form-floating mb-3">
@@ -693,7 +692,7 @@
         </div>
 
         <!-- Modal asignar docente-->
-        <div class="modal fade" id="asignarDocente" tabindex="-1" aria-labelledby="exampleModalLabel2"
+        <div class="modal fade" id="modalAsignarDocente" tabindex="-1" aria-labelledby="exampleModalLabel2"
           aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -702,7 +701,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
-              <form id="asignarDocente" action="#">
+              <form id="formAsignarDocente" action="#">
                 <div class="modal-body">
                   <div class="container-fluid">
 
@@ -733,6 +732,48 @@
           </div>
         </div>
 
+        <!-- Modal matricular alumnos-->
+        <div class="modal fade" id="modalMatricEstud" tabindex="-1" aria-labelledby="exampleModalLabel2"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel2">Asignar docente</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <form id="formMatricEstud" action="#">
+                <div class="modal-body">
+                  <div class="container-fluid">
+
+                    <div class="mb-3">
+                      <span for="recipient-name" class="text-dark ">Seleccione un docente</span>
+                    </div>
+
+                    <!-- select Periodo Académico -->
+                    <div class="mb-3 text-start">
+                      <select id="docente-select" name="docente-select" class="docente-select bg-primary"
+                        style="width: 50%;">
+                        <option value="" selected></option>
+                        <option value="1">Miguel Inga</option>
+                        <option value="2">Jose Olivera</option>
+                        <option value="3">Abram Gamarra</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button id="btn-reset" type="reset" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <span> usanddo rama jhimy</span>
       </div>
 
     </main>
