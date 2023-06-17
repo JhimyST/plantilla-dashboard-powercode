@@ -402,7 +402,7 @@
 
                 <!-- Lista de Cursos -->
                 <div class="tab-content" id="columnCursos">
-                  
+
                   <div class="lista-curso-item tab-pane fade show active" id="list-cursos-1" role="tabpanel"
                     aria-labelledby="primer-semestre">
                     <ul class="list-group">
@@ -421,9 +421,9 @@
                             <div class="d-flex">
                               <button type="button"
                                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                  class="bi bi-person-add fs-5"></i>
-                                
+                                data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                  class="bi bi-person-add fs-4 fw-bold"></i>
+
                               </button>
                             </div>
 
@@ -452,9 +452,9 @@
                             <div class="d-flex">
                               <button type="button"
                                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                  class="bi bi-person-add fs-5"></i>
-                                
+                                data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                  class="bi bi-person-add fs-4 fw-bold"></i>
+
                               </button>
                             </div>
                           </div>
@@ -475,9 +475,9 @@
                           <div class="d-flex">
                             <button type="button"
                               class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                              data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                class="bi bi-person-add fs-5"></i>
-                              
+                              data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                class="bi bi-person-add fs-4 fw-bold"></i>
+
                             </button>
                           </div>
                         </div>
@@ -502,9 +502,9 @@
                             <div class="d-flex">
                               <button type="button"
                                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                  class="bi bi-person-add fs-5"></i>
-                                
+                                data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                  class="bi bi-person-add fs-4 fw-bold"></i>
+
                               </button>
                             </div>
                           </div>
@@ -531,9 +531,9 @@
                               <!-- Button trigger modal Asignar Docente -->
                               <button type="button"
                                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                  class="bi bi-person-add fs-5"></i>
-                                
+                                data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                  class="bi bi-person-add fs-4 fw-bold"></i>
+
                               </button>
                             </div>
                           </div>
@@ -559,9 +559,9 @@
                               <!-- Button trigger modal Asignar Docente -->
                               <button type="button"
                                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
-                                data-bs-toggle="modal" data-bs-target="#asignarDocente"><i
-                                  class="bi bi-person-add fs-5"></i>
-                                
+                                data-bs-toggle="modal" data-bs-target="#modalAsignarDocente"><i
+                                  class="bi bi-person-add fs-5 fw-bold"></i>
+
                               </button>
                             </div>
                           </div>
@@ -711,9 +711,8 @@
 
                     <!-- select Periodo Académico -->
                     <div class="mb-3 text-start">
-                      <select id="docente-select" name="docente-select" class="docente-select bg-primary"
-                        style="width: 50%;">
-                        <option value="" selected></option>
+                      <select id="docente-select" name="docente-select" multiple="multiple"
+                        class="docente-select bg-primary" style="width: 100%;">
                         <option value="1">Miguel Inga</option>
                         <option value="2">Jose Olivera</option>
                         <option value="3">Abram Gamarra</option>
@@ -732,13 +731,13 @@
           </div>
         </div>
 
-        <!-- Modal matricular Estuidiantes-->
+        <!-- Modal matricular Estudiantes-->
         <div class="modal fade" id="modalMatricEstud" tabindex="-1" aria-labelledby="exampleModalLabel2"
           aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel2">Asignar docente</h1>
+                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel2">Matricular estudiantes</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
@@ -749,12 +748,20 @@
                     <div class="mb-3">
                       <span for="recipient-name" class="text-dark ">Seleccione los alumnos a matricular</span>
                     </div>
-
-                    <!-- select Periodo Académico -->
+                    <!-- select docentes -->
                     <div class="mb-3 text-start">
-                      <select id="alumno-select" name="alumno-select" class="alumno-select bg-primary"
-                        style="width: 50%;">
-                        <option value="" selected></option>
+                      <select id="docente-select-matricula" name="docente-select"
+                        class="docente-select" style="width: 100%;">
+                        <option value=""></option>
+                        <option value="1">Miguel Inga</option>
+                        <option value="2">Jose Olivera</option>
+                        <option value="3">Abram Gamarra</option>
+                      </select>
+                    </div>
+                    <!-- select estudiantes -->
+                    <div class="mb-3 text-start">
+                      <select id="alumno-select" name="alumno-select" multiple="multiple"
+                        class="alumno-select bg-primary" style="width: 100%;">
                         <option value="1">Jhimy Sullcaray</option>
                         <option value="2">Jose Gutierrez</option>
                         <option value="3">Isabell Espinoza</option>

@@ -47,8 +47,8 @@ $(document).ready(function () {
                 class="btn btn-link link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover"
                 data-bs-toggle="collapse" href="#${IdCollapseDocentes}" role="button" aria-expanded="false"
                 aria-controls="${IdCollapseDocentes}">
-                <i class="bi bi-eye-fill"></i>
-                Ver docentes
+                <i class="bi bi-eye-fill fs-4 fw-bold"></i>
+                
               </button>
             </div>`
         );

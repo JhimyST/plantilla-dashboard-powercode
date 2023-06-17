@@ -9,7 +9,17 @@ $(document).ready(function () {
     /* Inicializacion de select 2 en el modalMatricEstud*/
     $('#alumno-select').select2({
       placeholder: "Buscar",
+      dropdownParent: '#modalMatricEstud',  
+    });
+    $('#docente-select-matricula').select2({
+      placeholder: "Buscar",
       dropdownParent: '#modalMatricEstud',
     });
-  
+
+    
+    $('#docente-select').select2({
+      placeholder: "Buscar",
+      dropdownParent: '#modalAsignarDocente',
+    });
+
 });
