@@ -20,6 +20,8 @@ $(document).ready(function () {
       let contentCollapseDocentes = $(this).find("div.collapse"); // Obtener el div que contiene el contenido del collapse
       let IdCollapseDocentes = contentCollapseDocentes.attr('id'); // Obtener el id del div que contiene el contenido del collapse
 
+      console.log(IdCollapseDocentes);
+
       if (contentCollapseDocentes.children('div').text() != 0) {
         contentCollapseDocentes.parentsUntil(".list-group").find('.curso-btn-opciones').prepend(`
                           <div class="d-flex">

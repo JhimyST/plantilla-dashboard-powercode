@@ -433,14 +433,15 @@
                         <!-- Contenido del collapse -->
                         <div class="collapse" id="collapseDocentes1">
                           <div class="card card-body text-dark">
-                            Some placeholder content for the collapse component. This panel is hidden by default but
-                            revealed when the user activates the relevant trigger.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum iure, unde totam nulla
+                            voluptas ducimus, velit saepe ipsam beatae fuga autem. Recusandae explicabo repudiandae
+                            quidem nihil eaque nesciunt distinctio totam?
                           </div>
                         </div>
                       </li>
 
                       <li id="cursoEstad"
-                        class="list-group-item list-group-item-action d-flex flex-wrap align-items-center justify-content-between bg-opacity-75">
+                        class="list-group-item list-group-item-action d-flex flex-wrap alilink-underlinn-items-center justify-content-between bg-opacity-75">
                         <div class="row w-100 mx-auto px-0 align-items-center">
                           <div class="col-12 col-lg-5 ">
                             <div class="curso-name">Estadística</div>
@@ -461,8 +462,27 @@
                         </div>
 
                         <!-- Contenido del collapse -->
-                        <div class="collapse" id="collapseDocentes2">
+                        <div class="collapse w-100" id="collapseDocentes2">
                           <div class="card card-body text-dark">
+                            Seleccione un docente para vinculare a un salón:
+                            <div class="docentes-asignados">
+                              <div class="d-flex align-items-center">
+                                <span id="docenteAsignado3" class="fw-bold">Docente 3</span>
+                                <button type="button"
+                                  class="btn btn-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                  data-bs-toggle="modal" data-bs-target="#modalMatricEstud2">
+                                  <i class="bi bi-mortarboard fs-5 fw-bold"></i> Matricular Estudiantes
+                                </button>
+                              </div>
+                              <div class="d-flex align-items-center">
+                                <span id="docenteAsignado4" class="fw-bold">Docente 4</span>
+                                <button type="button"
+                                  class="btn btn-link link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                                  data-bs-toggle="modal" data-bs-target="#modalMatricEstud2">
+                                  <i class="bi bi-mortarboard fs-5 fw-bold"></i> Matricular Estudiantes
+                                </button>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -750,8 +770,8 @@
                     </div>
                     <!-- select docentes -->
                     <div class="mb-3 text-start">
-                      <select id="docente-select-matricula" name="docente-select"
-                        class="docente-select" style="width: 100%;">
+                      <select id="docente-select-matricula" name="docente-select" class="docente-select"
+                        style="width: 100%;">
                         <option value=""></option>
                         <option value="1">Miguel Inga</option>
                         <option value="2">Jose Olivera</option>
@@ -765,6 +785,16 @@
                         <option value="1">Jhimy Sullcaray</option>
                         <option value="2">Jose Gutierrez</option>
                         <option value="3">Isabell Espinoza</option>
+                        <option value="4">Carlos</option>
+                        <option value="5">Juan</option>
+                        <option value="6">Pedro</option>
+                        <option value="7">Luis</option>
+                        <option value="8">Camila</option>
+                        <option value="9">Fernando</option>
+                        <option value="10">Sebas</option>
+                        <option value="11">Cielo</option>
+                        <option value="12">Miriam</option>
+                        
                       </select>
                     </div>
                   </div>
@@ -772,13 +802,67 @@
                 <div class="modal-footer">
                   <button id="btn-reset" type="reset" class="btn btn-secondary"
                     data-bs-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-primary">Guardar</button>
+                  <button type="submit" class="btn btn-primary">Matricular</button>
                 </div>
               </form>
 
             </div>
           </div>
         </div>
+
+        <!-- Modal matricular Estudiantes diseño 2-->
+        <div class="modal fade" id="modalMatricEstud2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel2">Matricular estudiantes</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <form id="formMatricEstud" action="#">
+                <div class="modal-body">
+                  <div class="container-fluid">
+
+                    <div class="mb-3">
+                      <span for="recipient-name" class="text-dark ">Seleccione los alumnos a matricular</span>
+                    </div>
+                    <!-- select docentes -->
+                    <div class="mb-3 text-start">
+                      <span>Docente #</span>
+                    </div>
+                    <!-- select estudiantes -->
+                    <div class="mb-3 text-start">
+                      <select id="alumno-select2" name="alumno-select" multiple="multiple"
+                        class="alumno-select bg-primary" style="width: 100%;">
+                        <option value="1">Jhimy Sullcaray</option>
+                        <option value="2">Jose Gutierrez</option>
+                        <option value="3">Isabell Espinoza</option>
+                        <option value="4">Carlos</option>
+                        <option value="5">Juan</option>
+                        <option value="6">Pedro</option>
+                        <option value="7">Luis</option>
+                        <option value="8">Camila</option>
+                        <option value="9">Fernando</option>
+                        <option value="10">Sebas</option>
+                        <option value="11">Cielo</option>
+                        <option value="12">Miriam</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button id="btn-reset" type="reset" class="btn btn-secondary"
+                    data-bs-dismiss="modal">Cancelar</button>
+                  <button type="submit" class="btn btn-primary">Matricular</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+
 
       </div>
 
