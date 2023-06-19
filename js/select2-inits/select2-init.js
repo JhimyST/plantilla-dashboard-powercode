@@ -16,10 +16,10 @@ $(document).ready(function () {
       dropdownParent: '#modalMatricEstud',
     });
 
-    $('#alumno-select2').select2({
+    /* $('#alumno-select2').select2({
       placeholder: "Buscar",
       dropdownParent: '#modalMatricEstud2',  
-    });
+    }); */
 
     
     $('#docente-select').select2({

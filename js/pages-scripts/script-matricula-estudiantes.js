@@ -5,17 +5,15 @@ $(document).ready(function () {
   let areas = $("#formAreaSelect");
   let docentesOfCourses = $("#collapseDocentes1");
   let listaSemestres = $("#lista-semestres");
+  let leftSelectAlumnos = $("#leftSelectAlumnos");
 
-  console.log(listasCursos);
-  /* console.log(listasCursos); */
-
-  /* Validación de Existencia de Asignación de docentes */
+  //Validación de Existencia de Asignación de docentes
   listasCursos.each(function (index, listaCurso) {
     let cursosConDocentes = 0;
     let cursosSinDocentes = 0;
     let containerListaCursos = $(this).find('li div.collapse').parents("div.lista-curso-item");
 
-    /* Recorre cursos para añadir o quitar el botón de mostrar docentes */
+    //Recorre cursos para añadir o quitar el botón de mostrar docentes
     $(this).find('li').each(function (index, curso) {
       let contentCollapseDocentes = $(this).find("div.collapse"); // Obtener el div que contiene el contenido del collapse
       let IdCollapseDocentes = contentCollapseDocentes.attr('id'); // Obtener el id del div que contiene el contenido del collapse
@@ -41,7 +39,133 @@ $(document).ready(function () {
       }
     })
 
+  });//Recorre cada ul que guarda los cursos para cada semestre
 
-  });/* Recorre cada ul que guarda los cursos para cada semestre */
+  //Pasar seleccion de un lado a otro
+
+  /*   let selectedOptions = [];
+  
+    leftSelectAlumnos.on('change', function () {
+      
+      console.log(leftSelectAlumnos.val());
+      $("#btnMoveRight").on('click', function () {
+  
+        selectedOptions.push(leftSelectAlumnos.val());
+        console.log(selectedOptions);
+  
+      });
+    });
+   */
+
+  // Capture el select de frutas disponibles, el botón "Agregar", el select de frutas seleccionadas y el cuadro de búsqueda
+
+  const availableAlumnos = document.getElementById('leftSelectAlumnos');
+
+  const addAlumnosButton = document.getElementById('btnMoveRight');
+
+  const selectedAlumnos = document.getElementById('rightSelectAlumnos');
+
+  const AlumnoSearch = document.getElementById('alumnos-search');
+
+
+
+  // Escucha el evento input del cuadro de búsqueda para filtrar las opciones
+
+  AlumnoSearch.addEventListener('input', function (event) {
+
+    const searchTerm = event.target.value.toLowerCase();
+
+    const options = availableAlumnos.querySelectorAll('option');
+
+
+
+    // Oculta las opciones que no coinciden con el término de búsqueda
+
+    for (let i = 0; i < options.length; i++) {
+
+      const option = options[i];
+
+      const optionLabel = option.text.toLowerCase();
+
+      if (optionLabel.includes(searchTerm)) {
+
+        option.style.display = '';
+
+      } else {
+
+        option.style.display = 'none';
+
+      }
+
+    }
+
+  });
+
+
+  // Escucha el evento click del botón "Agregar"
+
+  addAlumnosButton.addEventListener('click', function () {
+
+    // Obtiene todas las opciones seleccionadas en el select de frutas disponibles
+
+    const selectedOptions = availableAlumnos.querySelectorAll('option:checked');
+
+    console.log(selectedOptions);
+
+    // Agrega las opciones seleccionadas al select de frutas seleccionadas, y elimina las opciones seleccionadas del select de frutas disponibles
+
+    for (let i = 0; i < selectedOptions.length; i++) {
+
+      const option = selectedOptions[i];
+
+      const newOption = document.createElement('option');
+
+      newOption.value = option.value;
+
+      newOption.text = option.text;
+
+      selectedAlumnos.add(newOption);
+
+      availableAlumnos.removeChild(option);
+
+    }
+
+  });
+
+
+
+  // Captura el select de frutas seleccionadas y el botón "Eliminar"
+
+  const removeFruitButton = document.getElementById('btnMoveLeft');
+
+  // Escucha el evento click del botón "Eliminar"
+
+  removeFruitButton.addEventListener('click', function () {
+
+    // Obtiene todas las opciones seleccionadas en el select de frutas seleccionadas
+
+    const selectedOptions = selectedAlumnos.querySelectorAll('option:checked');
+
+
+
+    // Agrega las opciones seleccionadas al select de frutas disponibles, y elimina las opciones seleccionadas del select de frutas seleccionadas
+
+    for (let i = 0; i < selectedOptions.length; i++) {
+
+      const option = selectedOptions[i];
+
+      const newOption = document.createElement('option');
+
+      newOption.value = option.value;
+
+      newOption.text = option.text;
+
+      availableAlumnos.add(newOption);
+
+      selectedAlumnos.removeChild(option);
+
+    }
+
+  });
 
 });

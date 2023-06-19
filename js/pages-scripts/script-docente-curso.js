@@ -28,6 +28,7 @@ $(document).ready(function () {
   /* Validación de selects */
   areas.on('change', function () {
     let varOption = areas.val();
+    console.log(varOption);
   });
 
   /* Validación de Existencia de Asignación de docentes */
