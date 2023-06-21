@@ -43,20 +43,6 @@ $(document).ready(function () {
 
   //Pasar seleccion de un lado a otro
 
-  /*   let selectedOptions = [];
-  
-    leftSelectAlumnos.on('change', function () {
-      
-      console.log(leftSelectAlumnos.val());
-      $("#btnMoveRight").on('click', function () {
-  
-        selectedOptions.push(leftSelectAlumnos.val());
-        console.log(selectedOptions);
-  
-      });
-    });
-   */
-
   // Capture el select de frutas disponibles, el botón "Agregar", el select de frutas seleccionadas y el cuadro de búsqueda
 
   const availableAlumnos = document.getElementById('leftSelectAlumnos');
@@ -65,41 +51,46 @@ $(document).ready(function () {
 
   const selectedAlumnos = document.getElementById('rightSelectAlumnos');
 
-  const AlumnoSearch = document.getElementById('alumnos-search');
-
+  const AlumnoLeftSearch = document.getElementById('alumnos-left-search');
+  const AlumnoRightSearch = document.getElementById('alumnos-right-search');
 
 
   // Escucha el evento input del cuadro de búsqueda para filtrar las opciones
-
-  AlumnoSearch.addEventListener('input', function (event) {
-
-    const searchTerm = event.target.value.toLowerCase();
-
-    const options = availableAlumnos.querySelectorAll('option');
+  buscarAlumno(AlumnoLeftSearch, availableAlumnos);
+  buscarAlumno(AlumnoRightSearch, selectedAlumnos);
 
 
-
-    // Oculta las opciones que no coinciden con el término de búsqueda
-
-    for (let i = 0; i < options.length; i++) {
-
-      const option = options[i];
-
-      const optionLabel = option.text.toLowerCase();
-
-      if (optionLabel.includes(searchTerm)) {
-
-        option.style.display = '';
-
-      } else {
-
-        option.style.display = 'none';
-
+  function buscarAlumno(iptBuscar, selectGroup){
+    iptBuscar.addEventListener('input', function (event) {
+  
+      const searchTerm = event.target.value.toLowerCase();
+  
+      const options = selectGroup.querySelectorAll('option');
+  
+      // Oculta las opciones que no coinciden con el término de búsqueda
+  
+      for (let i = 0; i < options.length; i++) {
+  
+        const option = options[i];
+  
+        const optionLabel = option.text.toLowerCase();
+  
+        if (optionLabel.includes(searchTerm)) {
+  
+          option.style.display = '';
+  
+        } else {
+  
+          option.style.display = 'none';
+  
+        }
+  
       }
+  
+    });
 
-    }
+  }
 
-  });
 
 
   // Escucha el evento click del botón "Agregar"

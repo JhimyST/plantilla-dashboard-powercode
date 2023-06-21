@@ -267,56 +267,219 @@
           <div class="universidad-name fst-italic fw-semibold">Universidad Nacional del Centro del Perú</div>
         </div>
 
+
+
         <!-- Formulario para filtros -->
         <div class="container-fluid w-100">
+
+
           <div class="container-fluid shadow-sm rounded border py-3" style="background: #e1eff3;">
+
             <form id="form-filtros" class="needs-validation">
-              <div class="container-fluid mb-3 px-0">
+              <div class="container-fluid mb-3">
                 <span>Seleccione la información correspondiente para la asignación de docentes</span>
               </div>
+              <div class="row w-100 mb-2 mx-auto">
 
-              <div class="row w-100 mb-2 gap-3">
-                <div class="col-12">
-                  <label for="formCompetenciaSelect" class="fw-bold w-100">Competencias
-
-                    <select id="formCompetenciaSelect" name="formCompetenciaSelect" class="form-select mb-3 js-example-basic-multiple js-states form-control"
-                    aria-label="Default select example" style="width: 100%;">
-                    <option value="" selected></option>
-                    <option value="1">Competencia 1</option>
-                    <option value="2">Competencia 2</option>
-                    <option value="3">Competencia 3</option>
+                <div class="col-12 col-sm-6 col-lg-3 ">
+                  <select id="formPeriodoSelect" name="formPeriodoSelect" class="form-select mb-3"
+                    aria-label="Default select example" required>
+                    <option selected disabled value="">Periodo Académico</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                   </select>
-                  </label>
-
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
                 </div>
-                <div class="col-12">
-                  <label for="formCursosSelect" class="fw-bold w-100">
-                    Elija uno o más cursos para asignarle a una competencia.
 
+                <div class="col-12 col-sm-6 col-lg-3 ">
+                  <select id="formAreaSelect" name="formAreaSelect" class="form-select mb-3"
+                    aria-label="Default select example">
+                    <option selected>Área </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 ">
+                  <select id="formFacultadSelect" name="formFacultadSelect" class="form-select mb-3"
+                    aria-label="Default select example">
+                    <option selected>Facultad</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 ">
+                  <select id="formProgEstudSelect" name="formProgEstudSelect" class="form-select mb-3"
+                    aria-label="Default select example">
+                    <option selected>Programa de Estudios</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 ">
+                  <select id="formPlanEstudSelect" name="formPlanEstudSelect" class="form-select mb-3"
+                    aria-label="Default select example">
+                    <option selected>Plan de Estudios</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="container-fluid text-end">
+                <button type="reset" class="btn btn-secondary mb-2 mb-sm-0">Limpiar Filtros</button>
+                <button id="apply-filters" type="submit" class="btn btn-primary mb-2 mb-sm-0">Aplicar Filtros</button>
+              </div>
+
+            </form>
+
+
+          </div>
+
+        </div>
+
+        <!-- Diseño 1 Formulario para asignar competencias y cursos -->
+        <!-- <div class="container-fluid my-5 ">
+          <div class="card border-0 shadow">
+            <div class="card-header fw-bold fs-4">...</div>
+            <div class="card-body">
+              <form id="formCompetenciaCurso" class="needs-validation">
+                <div class="container-fluid mb-3 px-0">
+                  <span>Seleccione la información correspondiente para la asignación de docentes</span>
+                </div>
+
+                <div class="row w-100 mb-2 gap-3">
+                  <div class="col-12">
+                    <label for="formCompetenciaSelect" class="fw-bold w-100">Competencias</label>
+                    <select id="formCompetenciaSelect" name="formCompetenciaSelect"
+                      class="form-select mb-3 js-example-basic-multiple js-states form-control"
+                      aria-label="Default select example" style="width: 50%;">
+                      <option value="" selected></option>
+                      <option value="1">Competencia 1</option>
+                      <option value="2">Competencia 2</option>
+                      <option value="3">Competencia 3</option>
+                    </select>
+
+                  </div>
+                  <div class="col-12">
+                    <label for="formCursosSelect" class="fw-bold w-100">
+                      Elija uno o más cursos para asignarle a una competencia.</label>
                     <select class="js-example-basic-multiple js-states form-control" id="formCursosSelect"
                       multiple="multiple" style="width: 100%;">
                       <option value="1">Desarrollo Web</option>
                       <option value="2">Aplicaciones Moviles</option>
                       <option value="3">Estadistica</option>
                     </select>
-                  </label>
+                  </div>
                 </div>
-                
 
-              </div>
+                <div class="container-fluid d-flex justify-content-center mt-4">
+                  <button type="reset" class="btn btn-secondary mb-2 mx-2 mb-sm-0">Limpiar Filtros</button>
+                  <button id="apply-filters" type="submit" class="btn btn-primary mb-2 mx-2 mb-sm-0">Asignar
+                    competencia</button>
+                </div>
 
-              <div class="container-fluid d-flex justify-content-center mt-4">
-                <button type="reset" class="btn btn-secondary mb-2 mx-2 mb-sm-0">Limpiar Filtros</button>
-                <button id="apply-filters" type="submit" class="btn btn-primary mb-2 mx-2 mb-sm-0">Asignar competencia</button>
-              </div>
-
-            </form>
+              </form>
+            </div>
           </div>
+        </div> -->
 
+
+        <!-- Diseño 2  Formulario para asignar competencias y cursos -->
+        <div class="container-fluid my-5 ">
+          <div class="card border-0 shadow">
+            <div class="card-header fw-bold fs-4">...</div>
+            <div class="card-body">
+              <div class="container-fluid mb-3 px-0">
+                <span>Seleccione la información correspondiente para la asignación de docentes</span>
+              </div>
+
+              <div class="row w-100 mb-2 gap-3">
+                <div class="col-12 mb-3">
+                  <label for="formCompetenciaSelect" class="fw-bold w-100 mb-3">Competencias</label>
+                  <select id="formCompetenciaSelect" name="formCompetenciaSelect"
+                    class="form-select js-example-basic-multiple js-states form-control"
+                    aria-label="Default select example" style="width: 50%;">
+                    <option value="" selected></option>
+                    <option value="1">Competencia 1</option>
+                    <option value="2">Competencia 2</option>
+                    <option value="3">Competencia 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- select cursos -->
+              <div class="row">
+                <!-- left select cursos -->
+                <div class="col-12 col-md-5">
+
+                  <div class="mb-3">
+                    <span class="fw-bold">Cursos Disponibles</span>
+                  </div>
+
+                  <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text" id="busquedaCursosLeft"><i class="bi bi-search"></i></span>
+                    <input id="cursos-left-search" type="text" class="form-control" placeholder="Buscar"
+                      aria-label="Buscar" aria-describedby="busquedaCursosLeft">
+                  </div>
+
+
+                  <select id="leftSelectCursos" class="form-select" multiple data-live-search="true"
+                    aria-label="multiple select example" style="min-height: 30vh;">
+                    <option value="1">Estadística</option>
+                    <option value="2">Análisis Matemático</option>
+                    <option value="3">Geometría Analítica</option>
+                    <option value="4">Desarrollo Móvil</option>
+                    <option value="5">Desarrollo Web</option>
+                    <option value="6">Investigación Operativa</option>
+                    <option value="7">Gobierno de TI</option>
+                    <option value="8">Gobierno Electrónico</option>
+                    <option value="9">Estructura de Datos</option>
+                    <option value="10">Seguridad de la Información</option>
+                  </select>
+
+                </div>
+
+                <!-- middle Botones-->
+                <div class="d-grid gap-2 col-12 col-md-1 mx-auto my-auto justify-content-center">
+                  <button id="btnMoveRight" class="btn" type="button"><i
+                      class="bi bi-arrow-right-circle-fill fs-2"></i></button>
+                  <button id="btnMoveLeft" class="btn" type="button"><i
+                      class="bi bi-arrow-left-circle-fill fs-2"></i></button>
+                </div>
+
+                <!-- right select cursos -->
+                <div class="col-12 col-md-5">
+
+                  <div class="mb-3">
+                    <span class="fw-bold">Cursos por Asignar</span>
+                  </div>
+
+                  <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text" id="busquedaCursosRight"><i class="bi bi-search"></i></span>
+                    <input id="cursos-right-search" type="text" class="form-control" placeholder="Buscar"
+                      aria-label="Buscar" aria-describedby="busquedaCursosRight">
+                  </div>
+
+                  <select id="rightSelectCursos" class="form-select" multiple aria-label="multiple select example" style="min-height: 30vh;">
+                  </select>
+                </div>
+              </div><!-- fin select -->
+            </div>
+            <div class="card-footer">
+              <div class="container-fluid text-end">
+                <button type="reset" class="btn btn-secondary mb-2 mb-sm-0">Cancelar</button>
+                <button id="apply-filters" type="submit" class="btn btn-primary mb-2 mb-sm-0">Asignar Cursos</button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Cards y relación entre semestres y cursos -->
-
 
         <!-- Lista de cursos por competencia -->
         <!-- Card y Tabla -->
@@ -328,16 +491,16 @@
             <div class="card-body">
               <div class="d-flex mb-3">
                 <form id="formCompetenciaCursos">
-                  <label for="CompetenciaCursos" class="fw-bold w-100">Seleccione la competencia para cargar los cursos a los que se aplica.
-    
-                    <select id="CompetenciaCursos" name="formCompetenciaSelect" class="js-example-basic-multiple js-states"
-                    aria-label="Default select example" style="width: 100%;">
+                  <label for="CompetenciaCursos" class="fw-bold w-100 mb-3">Seleccione la competencia para listar los cursos
+                    a los que se aplica.</label>
+                  <select id="CompetenciaCursos" name="formCompetenciaSelect"
+                    class="js-example-basic-multiple js-states" aria-label="Default select example"
+                    style="width: 100%;">
                     <option value="" selected></option>
                     <option value="1">Competencia 1</option>
                     <option value="2">Competencia 2</option>
                     <option value="3">Competencia 3</option>
                   </select>
-                  </label>
                 </form>
 
               </div>
@@ -380,89 +543,6 @@
 
         </div>
 
-
-        <!-- Modal Crear nuevo curso-->
-        <div class="modal fade" id="modCrearCurso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Creación de Nuevo Curso</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <!-- Formulario para Crear nuevo Curso -->
-              <form id="formCrearCurso" action="">
-                <div class="modal-body">
-                  <div class="container-fluid">
-
-                    <div class="mb-3">
-                      <span for="recipient-name" class="text-dark">Complete los campos para crear un nuevo curso.</span>
-                    </div>
-
-                    <!-- Campos del formulario -->
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="formNombreCurso" name="formNombreCurso"
-                        placeholder="Example input placeholder">
-                      <label for="formNombreCurso" class="fs-6">Nombre del Curso</label>
-
-                    </div>
-
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="formCodigoCurso" name="formCodigoCurso"
-                        placeholder="Another input placeholder">
-                      <label for="formCodigoCurso" class="fs-6">Código del Curso</label>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal asignar docente-->
-        <div class="modal fade" id="asignarDocente" tabindex="-1" aria-labelledby="exampleModalLabel2"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel2">Asignar docente</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-
-              <form id="asignarDocente" action="#">
-                <div class="modal-body">
-                  <div class="container-fluid">
-
-                    <div class="mb-3">
-                      <span for="recipient-name" class="text-dark ">Seleccione un docente</span>
-                    </div>
-
-                    <!-- select Periodo Académico -->
-                    <div class="mb-3 text-start">
-                      <select id="docente-select" name="docente-select" class="docente-select bg-primary"
-                        style="width: 50%;">
-                        <option value="" selected></option>
-                        <option value="1">Miguel Inga</option>
-                        <option value="2">Jose Olivera</option>
-                        <option value="3">Abram Gamarra</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button id="btn-reset" type="reset" class="btn btn-secondary"
-                    data-bs-dismiss="modal">Cancelar</button>
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                </div>
-              </form>
-
-            </div>
-          </div>
-        </div>
 
       </div>
 
@@ -510,6 +590,8 @@
   <script src="../js/datatables/datatables-competencia-curso-init.js"></script>
   <!-- Script de la página -->
   <script src="../js/pages-scripts/script-competencia-curso.js"></script>
+  <!-- Inicializacion de select2 -->
+  <script src="../js/select2-inits/select2-init.js"></script>
 
 
 

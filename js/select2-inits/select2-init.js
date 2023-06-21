@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
-    /* Inicializacion de select 2 en el modalAsignarDocente*/
+    //Inicializacion de select2 en el modalAsignarDocente
     $('#docente-select').select2({
       placeholder: "Buscar",
       dropdownParent: '#modalAsignarDocente',
     });
 
-    /* Inicializacion de select 2 en el modalMatricEstud*/
+    //Inicializacion de select2 en el modalMatricEstud
     $('#alumno-select').select2({
       placeholder: "Buscar",
       dropdownParent: '#modalMatricEstud',  
@@ -16,15 +16,22 @@ $(document).ready(function () {
       dropdownParent: '#modalMatricEstud',
     });
 
-    /* $('#alumno-select2').select2({
-      placeholder: "Buscar",
-      dropdownParent: '#modalMatricEstud2',  
-    }); */
-
-    
+    //Inicializacion de select2 en el ModalAsignarDocente
     $('#docente-select').select2({
       placeholder: "Buscar",
-      dropdownParent: '#modalAsignarDocente',
+      dropdownParent: '#asignarDocente',
     });
+  
+    $('#formCompetenciaSelect').select2({
+      placeholder: "Buscar",
+    });
+  
+    $('#formCursosSelect').select2({
+      placeholder: "Buscar",
+    });
+    $('#CompetenciaCursos').select2({
+      placeholder: "Buscar",
+    });
+  
 
 });
